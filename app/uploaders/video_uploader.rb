@@ -1,4 +1,13 @@
 class VideoUploader < CarrierWave::Uploader::Base
+
+  include CarrierWave::Video
+  process encode_video: [:mp4, resolution: "640x480"]
+  def full_filename(for_file)
+    super.chomp(File.extname(super)) + '.mp4'
+  end
+  def filename
+    original_filename.chomp(File.extname(original_filename)) + '.mp4'
+  end
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick

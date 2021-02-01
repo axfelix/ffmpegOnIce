@@ -7,7 +7,7 @@
 
 <p>
   <strong>File:</strong>
-  <%= @video.file %>
+  <video controls width="640" height="480" src="<%= @video.file %>"></video>
 </p>
 
 <%= link_to 'Edit', edit_video_path(@video) %> |
