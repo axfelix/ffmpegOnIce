@@ -12,13 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :video_title %>
+
+    <%= form.file_field :file, id: :video_file %>
   </div>
 
   <div class="field">
-    <%= form.label :file %>
-    <%= form.file_field :file, id: :video_file %>
+    <%= form.radio_button :title, 'tblend_glitch' %> tblend_glitch
+    <%= form.radio_button :title, 'tile' %> tile
+    <%= form.radio_button :title, 'reverse' %> reverse
+    <%= form.radio_button :title, 'pseudocolor' %> pseudocolor
+    <%= form.radio_button :title, 'lagfun' %> lagfun
+    <%= form.radio_button :title, 'jetcolor' %> jetcolor
+    <%= form.radio_button :title, 'bitplaneslices' %> bitplaneslices
   </div>
 
   <div class="actions">
