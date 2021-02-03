@@ -5,11 +5,11 @@ class VideoUploader < CarrierWave::Uploader::Base
   process encode_video: [:mp4,
     resolution: "1280x960",
     # tblend_glitch
-    custom: %w(-to 5 -vf scale=-2:720,tblend=all_mode=difference,tblend=all_mode=difference,tblend=all_mode=difference,spp=4:10,tblend=all_mode=average,tblend=all_mode=difference,tblend=all_mode=difference,tblend=all_mode=difference,spp=4:10,tblend=all_mode=average,tblend=all_mode=difference,tblend=all_mode=difference,tblend=all_mode=difference,spp=4:10,tblend=all_mode=average,tblend=all_mode=difference,tblend=all_mode=difference,tblend=all_mode=difference)]
+    # custom: %w(-to 5 -vf scale=-2:720,tblend=all_mode=difference,tblend=all_mode=difference,tblend=all_mode=difference,spp=4:10,tblend=all_mode=average,tblend=all_mode=difference,tblend=all_mode=difference,tblend=all_mode=difference,spp=4:10,tblend=all_mode=average,tblend=all_mode=difference,tblend=all_mode=difference,tblend=all_mode=difference,spp=4:10,tblend=all_mode=average,tblend=all_mode=difference,tblend=all_mode=difference,tblend=all_mode=difference)]
     # tile
     # custom: %w(-to 5 -vf scale=iw/${4}:ih/${4}:force_original_aspect_ratio=decrease,tile=${4}x${4}:overlap=${4}*${4}-1:init_padding=${4}*${4}-1)]
     # reverse
-    # custom: %w(-to 5 -vf reverse)]
+    custom: %w(-to 5 -vf reverse)]
     # pseudocolor
     # custom: %w(-to 5 -filter_complex eq=brightness=0.40:saturation=8,pseudocolor='if(between(val,ymax,amax),lerp(ymin,ymax,(val-ymax)/(amax-ymax)),-1):if(between(val,ymax,amax),lerp(umax,umin,(val-ymax)/(amax-ymax)),-1):if(between(val,ymax,amax),lerp(vmin,vmax,(val-ymax)/(amax-ymax)),-1):-1')]
     # lagfun
