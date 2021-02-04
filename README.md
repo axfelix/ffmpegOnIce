@@ -8,7 +8,7 @@ Look, buddy, I don't know. I wanted to play with Rails in my last couple weeks a
 
 **Please explain the joke more**
 
-OK, fine, anyway, it lives at [https://ffmpeg-on-ice.herokuapp.com/](https://ffmpeg-on-ice.herokuapp.com/). I do a lot of my own cowboy deployments lately for various reasons (server sovereignty, free academic resources, years of running desktop Linux...) and using Rails also seemed like a good excuse to use Heroku. Plus, this thing actually hits the CPU pretty hard when it processes video, and Heroku's limited compute hours and [transient storage](https://devcenter.heroku.com/articles/active-storage-on-heroku) were just the ticket for a project that needs a real backend but doesn't do anything persistent.
+OK, fine, anyway, it lives at [https://ffmpeg-on-ice.herokuapp.com/](https://ffmpeg-on-ice.herokuapp.com/). I do a lot of my own cowboy deployments lately for various reasons (server sovereignty, free academic resources, years of running desktop Linux...) and using Rails also seemed like a good excuse to use Heroku. Plus, this thing actually hits the CPU pretty hard when it processes video, and Heroku's limited compute hours and [transient storage](https://devcenter.heroku.com/articles/active-storage-on-heroku) were just the ticket for a project that needs a real backend but doesn't do anything persistent. Heroku's free tier memory limits, on the other hand, were rather less helpful... no promises it'll stay up.
 
 Used [this](https://www.randygirard.com/how-to-create-a-video-upload-platform-using-ruby-on-rails-part-1/) as a very helpful starting point.
 
